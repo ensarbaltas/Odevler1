@@ -96,7 +96,29 @@ okulundan  1982’de mezun olmuştur.""",sep=(">"),end="\n"*2)
 print("^"*67,"\n")
 
 
+EXTRA ODEV
+
+#Kediler ilk dogduklarindaki kilolari;
+
+BK1=106
+SO1=93
+SB1=112
+SK1=83
+BB1=109
+
+#Kedilerin kilolari;
+print("Kedilerin son haftaki kilolari ;","\n")
+
+BK=int(input("Beyaz küçük : "))
+SO=int(input("Siyah orta  : ")) 
+SB=int(input("Siyah buyuk : "))
+SK=int(input("Siyah Küçük : "))
+BB=int(input("Beyaz büyük : "))
 
 
+print("\n"*2,"KEDILERIN AGIRLIKLARINDAKI HAFTALIK ARTIS MIKTARLARI","\n"*2,
+      "Beyaz küçük : ",BK-BK1,"\n","Siyah orta  : ",SO-SO1,"\n",
+      "Siyah buyuk : ",SB-SB1,"\n","Siyah Küçük : ",SK-SK1,"\n",
+      "Beyaz büyük : ",BB-BB1)
 
 
