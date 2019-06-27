@@ -1,0 +1,301 @@
+1.Odev : Burclar
+kob="Koç Burcu" # : 21 Mart - 19 Nisan
+bob="Boğa Burcu" # : 20 Nisan - 20 Mayıs
+ikb="İkizler Burcu" # : 21 Mayıs - 21 Haziran
+yeb="Yengeç Burcu" # : 22 Haziran - 22 Temmuz
+asb="Aslan Burcu" # : 23 Temmuz - 22 Ağustos
+bab="Başak Burcu" # : 23 Ağustos - 22 Eylül
+teb="Terazi Burcu" # : 23 Eylül - 22 Ekim
+akb="Akrep Burcu" # : 23 Ekim - 21 Kasım
+yab="Yay Burcu" # : 22 Kasım - 21 Aralık
+ogb="Oğlak Burcu" # : 22 Aralık - 19 Ocak
+kvb="Kova Burcu" # : 20 Ocak - 18 Şubat
+blb="Balık Burcu" # : 19 Şubat - 20 Mart
+
+k=1
+while k==1:
+
+    print("Dogum tarihiniz : ")
+
+    aa=input("ay : ")
+
+    aa_int=int(aa)
+
+    gg=input("gun : ")
+
+    burc_str=aa+gg
+
+    burc=int(burc_str)
+    
+
+
+
+
+    if aa_int>12:
+        print("hatali girdiniz!! Lutfen tekrar deneyiniz..")
+
+              
+
+
+    elif 321<burc<419:
+        print("Burcunuz : ",kob)
+
+        print("""Koç Burcu Genel Özellikleri :
+Ateş grubuna dahil olan Koç burçları çevrelerinde
+yüksek enerjileri vegirişimci ruhlarıyla tanınırlar.""")
+    elif 420<burc<520:
+        print("Burcunuz : ",bob)
+
+        print("""Boğa Burcu Genel Özellikleri :
+Toprak grubuna dahil olan Boğa burçları sakin yapıları ve
+güvenilir olmalarıyla bilinirler. Keskin bir maddi zekaları vardır.""")
+
+    elif 521<burc<621:
+    
+        print("Burcunuz : ",ikb)
+
+        print("""İkizler Burcu Genel Özellikleri : 
+Hava grubuna ait olan İkizler burcu neşesiyle, pozitifliğiyle ve
+pratik zekasıyla bulunduğu çevrede tanınırlar. İletişim kurma becerileri
+gelişmiştir. Her zaman herkesle rahatça anlaşabilirler.""")
+
+    elif 622<burc<722:
+        print("Burcunuz : ",yeb)
+
+        print("""Yengeç Burcu Genel Özellikleri
+Su grubuna ait olan Yengeç burçları duygusal yapıları ve ailelerine
+düşkünlükleriyle bilinirler. Annelik denildiğinde Yengeç burcu akla gelir.
+Her zaman kendinden önce sevdiklerinin ve çocuklarının güvende olmaları onlar
+için önemlidir.""")
+
+    elif 723<burc<822:
+        print("Burcunuz : ",asb)
+
+        print("""Aslan Burcu Genel Özellikleri :
+Ateş grubuna ait olan Aslan burçları liderlik özellikleri ve gururlu yapılarıyla
+dikkatleri çekerler. Yönetme yetenekleri bir hayli fazladır. Kendine güveni olan
+bir burçtur. Güçlü bir karakteri vardır.""")
+
+    elif 823<burc<922:
+        print("Burcunuz : ",bab)
+
+        print("""Başak Burcu Genel Özellikleri :
+Toprak grubuna üye olan Başak burçlarını çalışkanlığı, disiplinli tutumları ve
+ince ayrıntılara verdikleri önemlerden tanıyabilirsiniz.""")
+
+    elif 923<burc<1022:
+        print("Burcunuz : ",teb)
+
+        print("""Terazi Burcu Genel Özellikleri :
+Hava grubuna ait Terazi burçları nazik, güler yüzlü ve güzelliklerine düşkün
+olmalarıyla bulundukları ortamda dikkatleri çekerler. Her zaman pozitif enerji
+saçan bu burç, hayatın güzelliklerine kendini adamıştır.""")
+
+    if 1023<burc<1121:
+        print("Burcunuz : ",akb)
+
+        print("""Akrep Burcu Genel Özellikleri :
+Su grubu Akrep burçları etkileyici bakışları, gizemli ve güçlü karakterleriyle
+bulundukları ortamlarda hemen dikkati çekerler. Çoğu zaman sessizlikleriyle ön plana
+çıkan Akrep burçları az ve öz konuşurlar.""")
+
+    if 1122<burc<1221:
+        print("Burcunuz : ",yab)
+
+        print("""Yay Burcu Genel Özellikleri :
+Ateş grubuna dahil Yay burçları pozitif enerjileri, neşeleri ve uyumlu yapılarıyla
+bilinirler. Yüksek enerjileri sayesinde her şeye yetişebilen bir burçtur.""")
+
+    
+    elif 1222<burc+12<1319:
+        print("Burcunuz : ",ogb)
+
+        print("""Oğlak Burcu Genel Özellikleri :
+Toprak grubunun üyelerinden olan Oğlak burcu çalışkanlığı, ciddiyeti ve sabrıyla
+ilk başta dikkat çeker. Hayattaki her konuya ciddi yaklaşırlar.""")
+
+    elif 120<burc<218:
+        print("Burcunuz : ",kvb)
+
+        print("""Kova Burcu Genel Özellikleri :
+Hava grubunun temsilcilerinden olan Kova burçları marjinal tavırlarıyla,
+özgürlüklerine düşkünlükleriyle ve zekalarıyla bilinirler.""")
+
+    elif 219<burc<320:
+        print("Burcunuz : ",blb)
+
+        print("""Balık Burcu Genel Özellikleri: 
+Su grubuna dahil olan Balık burçları duygusal yapıları, şefkatli tavırları ve geniş
+hayal güçleriyle kendilerini gösterirler. İnsani değerlere önem veren bu burcun
+bireylerinin empati yetenekleri çok gelişmiştir.""")
+
+        
+
+
+2.Odev : km - mil cevrimi
+# 1 km =0,62 mil'dir
+
+while True:
+
+    km=input("kilometre degeri giriniz : (cikmak icin q)")
+
+    kmcvrm=float(km)*0.62
+
+    print("girdiginiz km degeri : ", kmcvrm, "mil'dir")
+        
+
+    mil=input("mil degeri giriniz : ")
+
+    milcvrm=float(mil)/0.62
+
+    print("girdiginiz mil degeri : ", milcvrm, "km'dir")
+
+    if km == "q":
+        print("cikiliyor")
+
+3. odev : kullanici adi ve parola
+#print("""Sisteme kayit icin kullanici adi ve parola olusturmaniz gerekmektedir.\n
+#Kullanici adinizi harfler arasinda bosluk birakmadan yaziniz.\n
+#kullanici adiniz en az 3 en fazla 18 karekterden olusmalidir, \n rakam icermemelidir!!""")
+devam=1
+while devam==1:
+
+    kul_adi = input("Kullanıcı Adı Giriniz :")
+    
+
+    if not int(len(kul_adi)) in range(3,13):
+           
+        print("parola 13 karaktrrden uzun 3 karakterden kisa olmamali")       
+        continue
+    if 3<=len(kul_adi)<=13:
+        rakamlar="0123456789"
+        for x in kul_adi:
+            if x in rakamlar:
+
+                print("Rakam kullanilamaz! Tekrar deneyiniz..")
+
+    break
+while devam==1:
+    
+    parola=input("Parola  : ")
+   
+    print(parola)
+    
+    if not parola:
+
+        pass
+    buyukharfler="ABCDEFGHIJKLMNOPRSTUVXWYZT"
+    kucukharfler="abcdefghijklmnoprstuvxwyzt"
+    rakamlar="1234567890"
+
+
+    if not int(len(parola)) in range(6,12):
+
+        print("parola 12 karaktrrden uzun 6 karakterden kisa olmamali")
+
+        continue
+
+    else:
+    
+        for k in parola:
+            if k in buyukharfler:
+
+                print("")
+            
+        for l in parola:
+            if l in kucukharfler:
+
+                print("") 
+
+        for m in parola:
+            if m in rakamlar:
+    
+                print("R")
+                
+                continue
+        else:
+            print("parolaniz basariyla olusturulmustur")
+                    
+        continue        
+        
+    #else:
+
+        #print("parola belirleme isleminiz gerceklesememistir..")
+        
+
+4.odev : sayi tahmin oyunu
+#sayi tahmin oyunu: kullanici 5 denemede bilrse 1 yildiz,
+# 3 denemede 2 yildiz, 1 denemede 3 yildiz kazansin
+a=0
+while a<5:
+    a+=1
+    
+    sayi="6"
+    tahmin=input("1 ile 10 arasinda bir sayi yazinz : ")
+
+
+    b=0
+    if tahmin!=sayi:
+        
+        print("tekrar deneyiniz..")
+        b+=1
+        continue
+        
+    elif tahmin==sayi:
+        
+        print("Tebrikler '*' kazandiniz")
+        b==1
+    
+    elif tahmin==sayi:
+        
+        print("Tebrikler '**' kazandiniz")
+        b==2
+        
+    
+    elif tahmin==sayi:
+        
+        print("Tebrikler '***' kazandiniz")
+        b==3
+        
+    else:
+
+        print("Malesef bilemediniz..")
+    
+
+5. odev : ATM
+
+  #hesapta 1000 var. 1-bakiye kontrolu, 2-para yatirma, 3-para cekme
+#fazla para cekme uyarisi yap, 2.ve 3. islemden sonra bakiye goster
+#baska islem yapmak istiyormusun diye sor
+
+bakiye=1000
+
+bakiye_sorgulama=input("Bakiyenizi ogrenmek icin 'Enter' butonuna basiniz")
+
+print("hesabinizda ", bakiye, " Tl bulunmaktadir")
+
+islem=input("para yatirmak icin '1' rakamna basiniz")
+
+para_yatirma=int(input("Yatiracaginiz miktari giriniz  "))
+       
+print("yatirdiginiz miktar ", para_yatirma," Tl dir")
+
+islem=input("para cekmek icin '2' rakamna basiniz")
+
+para_cekme=int(input("Cekeceginiz miktari giriniz "))
+
+kalan_bakiye=para_yatirma-para_cekme
+
+print("Cektiginiz miktar ", para_cekme ," Tl dir.", "\n",
+      "Hesabinizda kalan miktar ",
+        kalan_bakiye, " Tl dir.")
+
+baska_islem=input("""Baska islem yapmak istiyorsaniz 'devam' tusuna basiniz
+istemiyorsaniz 'cikis tusuna basiniz""")
+print("Tesekkurler..")
+
+    
+
+
+    
+
