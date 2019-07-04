@@ -1,0 +1,271 @@
+## 1.ODEV: HESAP OLUSTURMA
+##	Kullanicidan, kullanici adi ve parola olusturarak hesap olusturmasini
+##	isteyin. Bu aldiginiz bilgileri bir dosyaya yazdirin.
+##	Her gırıste dosyadakı bılgıler sıfırlanmasın kayıt bılgılerı dosyaya
+##	eklenmeye devam etsın. Kullanici daha once girilmis olan bir kullanici
+##	adiyla hesap olusturmak isterse, bu kullanici adinin daha once
+##	secildigini ve baska bir kullanici adiyla hesap olusturmasini isteyin.
+
+
+
+#######################################################
+
+aa=0
+kullanilmis="Phyton3.7" 
+kuladi=input("Bir kullanici adi giriniz : ")
+parola=input("Bir parola olusturunuz : ")
+
+bb=len(kuladi)
+for x in kuladi: #kullanilmis olan harfler x e kodlandi
+    aa+=len(x)
+
+    
+    
+    if aa==bb and x in kullanilmis:
+        print("Bu kullanici adi sisteme kayitlidir.")
+        print("Lutfen yeni bir kullanici adi giriniz..")
+          
+    break
+    
+else:
+    
+    print("kullanici adiniz : ", kuladi)
+    print("Prolaniz         : ", parola)
+    print("Kayit isleminiz basariyla gerceklesmistir..")
+            
+    
+dosya=open("hesap.txt","a")
+
+dosya.write(kuladi)
+dosya.write("\n")
+dosya.write(parola)
+dosya.write("\n")
+
+dosya.close()
+   
+
+    
+##2.ODEV: SAYI TAHMIN OYUNU
+##Bir degiskene 0-100 arasinda bir deger atayin. Kullanicidan bu sayiyi tahmin
+##etmesini isteyin. Kullaniciyi yaptigi tahminlere gore yonlendirin.
+##Kacinci denemede bildigini soyleyin.
+############################################################################
+
+
+sayac=0
+while sayac!=10 :
+
+    atanan=73
+
+    tahmin=int(input("Bir sayi tahmin ediniz : "))
+
+    
+
+    if tahmin>atanan and tahmin-atanan>10:
+        print("Cok daha kucuk rakam giriniz..  ")
+
+    if tahmin>atanan and tahmin-atanan<10:
+        print("Biraz daha kucuk rakam giriniz..  ")     
+        
+    if tahmin<atanan and tahmin-atanan>10:
+        print("Cok daha buyuk rakam giriniz.. ")
+
+    if tahmin<atanan and tahmin-atanan<10:
+        print("Biraz daha buyuk rakam giriniz.. ")
+
+    
+
+    elif tahmin==atanan:
+        print("Tebrikler",sayac," denemede kazandiniz..")
+        print("Tekrar oynamak icin..")
+    sayac+=1
+    continue
+    
+else:
+    print("Tesekkurler..!")
+        
+   
+##3.ODEV: LISTE AYIKLAMA
+##Ekte gonderilmis olan text dosyasinda 3 takimin futbolcularinin isimleri ve
+##takimlari yer almaktadir. Sizden 3 tane dosya olusturmanizive bu 3 dosyaya
+##futbolculari takimlarina gore ayirmanizi istiyoruz. Ayrica kaynak dosyanin
+##bulunamamasi durumunda da gerekli uyariyi yapmalisiniz.
+
+###########################################################################
+
+##f=open("futbolcular2.txt","r+")  ##hem okuma hemde yazma formatinda dosya ac
+##       
+##with open("futbolcular2.txt","r+") as f:
+##    veri=f.readlines() ##dosyayi oku ve veriye aktar
+##    veri.insert(0,"Fenerbahceli Futfolcular : \n\n") ##verinin ilk satirina ekle
+##    veri.insert(3,"\nGalatasarayli Futbolcular : \n\n") ##3.satira ekle
+##    veri.insert(7,"\nBesiktasli Futbolcular : \n\n") ##7.satira ekle
+##    f.seek(0)  ##verinin basina don
+##    f.writelines(veri) ##en son veriyi yaz
+
+###########################################################################
+
+f=open("futbolcular2.txt","r+")
+with open("futbolcular2.txt","r+") as f:
+    
+
+    k=open("Fenerbahce.txt","r+") 
+    with open("Fenerbahce.txt","r+") as k:
+
+        veri=f.readlines()
+        for t in veri:
+            if "FB" in t:
+                k.write(t)
+
+
+    m=open("Galatasaray.txt","r+")
+    with open("Galatasaray.txt","r+") as m:
+
+        for t in veri:
+            if "GS" in t:
+                m.write(t)
+                
+
+    n=open("Besiktas.txt","r+")
+    with open("Besiktas.txt","r+") as n:
+
+        for t in veri:
+            if "BS" in t:
+                n.write(t)
+        
+
+
+##4.ODEV: ALAN-HACIM HESAPLAMA
+##Karenin, ucgenin ve diktortgenin alanlarini hesaplayan, kup,kure ve koni
+##seklinde olan cisimlerin hacmini hesaplayan bir program yazmanizi istiyoruz.
+##Kullanicidan hangi seklin alanini veya hangi sekildeki cismin hacmini hesaplamak
+##istedigini sormalisiniz ve o islem icin gereken verileri isteyip hesaplamayi
+##yapmalisiniz. Tum bu islemleri yaparken hata alinabilecek durumlari ongorerek
+##gerekli onlemleri almalisiniz.
+
+while True:
+
+    try:
+        pi=3.14
+        tercih=input("""ne tur bir hesaplama yapmak istiyorsunuz?
+                     "Kare alani icin "k "
+                     "Dikdortgen alanu icin "d "
+                     "Ucgen alani cin "u "
+                     "Kup hacmi icin "p "
+                     "Kure hacmi icin "e "
+                     "Koni hacmi icin "i " harflerine basiniz..
+                     "Cikis icin "q
+                     tercihiniz:   """)
+
+        if tercih=="q":
+            print ("cikiliyor..")
+            break
+
+        elif tercih=="k":
+        
+            kk=int(input("Kenar uzunlugu giriniz : "))
+            ka=float(kk**2)
+            print("Karenin alani : ", ka)
+            
+            
+        elif tercih=="d":
+            du=int(input("Uzun kenari giriniz : "))
+            dk=int(input("Kisa kenari giriniz : "))
+            da=float(du*dk)
+            print ("Dikdortgenin alani : ",da)
+            
+        elif tercih=="u":
+            ut=int(input("Taban kenari giriniz ; "))
+            uy=int(input("yukseklik kenari giriniz ; "))
+            ua=int((ut*uy)/2)
+            print ("Ucgenin alani : ",ua)
+            
+        elif tercih=="p":
+            kupk=int(input("Bir kenar uzunlugu giriniz : "))
+            kuph=float(kupk**3)
+            print ("Kupun hacmi : ",kuph)
+            
+        elif tercih=="e":
+            kurer=int(input("Yaricapi giriniz : "))
+            kureh=float((4/3)*pi*(kurer**3))
+            print ("Kurenin hacmi : ",kureh)
+            
+        elif tercih=="i":
+            konir=int(input("Yaricapi giriniz : "))
+            konih=int(input("Yuksekligi giriniz : "))
+            konih=float((1/3)*pi*(konir**2)*konih)
+            print ("Koninin hacmi : ",konih)
+            
+
+        else:
+            print("Lutfen dogru durust secim yapiniz :-)")
+            continue
+    except ValueError:
+        print("Iyi niyeti suistimal etmeyiniz..")
+
+
+
+##5.ODEV: FIZZ BUZZ
+##1'den 100'e kadar sayilari yazdirin. Fakat 3'e tam bolunen sayilarin yerine
+##FIZZ, 5'e tam bolunen sayilarin yerine BUZZ, hem 3'e hem de 5'e tam
+##bolunebilen sayilarin yerine FIZZBUZZ yazsin.
+
+a=0
+while a<101:
+    k=open("fizzbuzz.txt","r+")
+    with open("fizzbuzz.txt","r+") as k:
+        sayi=str(a)
+        k.write(sayi)
+        dosya=k.readlines()
+        print(dosya)
+        for s in dosya:
+            if s in sayi and a%3==0:
+                k.write("fizz")
+                print("fizz")
+            if  s in sayi and a%5==0:
+                k.write("buzz")
+                print("buzz")
+            if s in sayi and a%3==0 and a%5==0:
+                k.write("fizzbuzz")
+                print("fizzbuzz")
+              
+    a+=1
+    continue                
+else:
+    print("kolay gelsin..")
+        
+
+
+##6.ODEV: ASAL SAYI MI?
+##Kullanicidan aldiginiz sayinin asal sayi olup olmadigini sorgulayan bir
+##program yazmanizi istiyoruz.
+##1 asal sayi degildir
+##en kucuk asal sayi 2 dir
+##2 disinda cift asal sayi yoktur
+##yani tum asal sayilar tektir.
+
+
+sayi=int(input("Bir sayi giriniz : "))
+
+while True:
+
+    if sayi%2==0 or sayi%3==0 or sayi%5==0 or sayi%7==0 or sayi/sayi**0.5:
+        print("asal degil")
+        break
+    
+    else:
+        print("asaldir")
+        break
+    
+   
+
+    
+           
+
+
+
+
+
+
+
+
