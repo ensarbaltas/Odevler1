@@ -1,0 +1,153 @@
+##1-)Kullanıcıdan bir input alınız. Input'taki küçük harfleri büyükharfe
+##dönüştüren bir program yazınız.
+##Ör input: Hello World!
+##Ör output: HELLO WORLD!
+
+kul1=input("Bir ozlu soz yaziniz : ")
+
+kul2=kul1.upper()
+print(kul2)
+
+
+
+
+
+##2-)Kullanıcıdan bir input alınız. Girmiş olduğu inputta büyük harf sayısı,
+##küçük harf sayısı, rakam sayısı ve bunların haricindeki özel karakter
+##sayılarını veren bir program yazınız.
+
+kul1=input("Yasadiginiz sehirin ismini ve nufusunu yaziniz :  ")
+
+buyukharfler="ABCDEFGHIJKLMNOPRSTUWVYZX"
+kucukharfler="abcdefghijklmnoprstuvwyzx"
+rakamlar="0123456789"
+karekterler="""/?.<>';}]{{=+-_)(*&^%$@!`~,"""    
+
+
+b=-1
+for i in kul1:
+    sayac1=b+1
+    if i in kucukharfler:
+        b+=len(i)
+        
+        continue
+c=-1
+for i in kul1:
+    sayac2=c+1
+    if i in buyukharfler:
+        c+=len(i)
+        
+        continue
+d=-1
+for i in kul1:
+    sayac3=d+1
+    if i in rakamlar:
+        d+=len(i)
+        
+        continue
+e=-1
+for i in kul1:
+    sayac4=e+1
+    if i in karekterler:
+        e+=len(i)
+           
+        continue 
+        break
+else:
+    print("kucuk harf sayisi : ",sayac1)
+    print("buyuk harf sayisi : ",sayac2)
+    print("rakam sayisi      : ",sayac3)
+    print("karekter sayisi   : ",sayac4)
+
+
+
+##3-)Kullanıcıdan bir input alınız. Girmiş olduğu inputtaki rakamların toplamını
+##veren bir program yazınız. (Kullanıcı rakam girmek zorunda değil. farklı
+##karakter girişi de yapabilir.)
+##Örnek input = "art12kl4*"
+
+veri=input("icinde rakamlarin oldugu kisa bir cumle yaziniz : ")
+rakamlar=("0123456789")
+a="1"
+b="2"
+c="3"
+d="4"
+e="5"
+f="6"
+g="7"
+h="8"
+k="9"
+aa=int(veri.count(a))
+bb=int(veri.count(b))
+cc=int(veri.count(c))
+dd=int(veri.count(d))
+ee=int(veri.count(e))
+ff=int(veri.count(f))
+gg=int(veri.count(g))
+hh=int(veri.count(h))
+kk=int(veri.count(k))
+toplam=aa*1+bb*2+cc*3+dd*4+ee*5+ff*6+gg*7+hh*8+kk*9
+
+print("Rakamlarin toplami : ", toplam, " dir.")
+    
+
+
+
+
+##4-)Futbolcular dosyasındaki futbolculardan ismi sesli harf ile başlayanları
+##ayrı bir dosyaya yazdırınız.
+
+
+f=open("futbolcular2.txt","r+")
+with open("futbolcular2.txt","r+") as f:
+
+
+    k=open("Sesliler.txt","r+") 
+    with open("sesliler.txt","r+") as k:
+    
+        veri=f.readlines()
+        for x in veri:
+            aa=x.startswith("A")
+            ee=x.startswith("E")
+            ii=x.startswith("I")
+            oo=x.startswith("O")
+            uu=x.startswith("U")
+            
+            if aa==True or ee==True or ii==True or oo==True or uu==True:
+                print(x)
+                k.write(x)
+            
+
+
+
+
+##5-)Futbolcular dosyasındaki futbolcu isimlerini yazdığınız program ile Türkçe
+##karakter içermeyecek bir hale getirip yeni bir dosyaya kaydediniz.
+
+tr="şçöüğıŞÇÖÜĞİ"
+en="scougiSCOUGI"
+
+ceviri=str.maketrans(tr,en)
+
+f=open("futbolcular.txt","r+")
+with open("futbolcular.txt","r+") as f:
+
+    metin=f.read()
+    
+    print(metin.translate(ceviri))
+    
+    k=open("trkod.txt","w+") 
+    with open("trkod.txt","r+") as k:
+
+        k.write(metin.translate(ceviri))
+
+
+        
+
+
+
+
+
+
+
+    
