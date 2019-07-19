@@ -1,0 +1,180 @@
+##1.odev : adam asmaca oyunu
+          
+tahta  = [[""],
+         ["----------------"],     
+         ["|  "],["              "],
+         ["|  "],["              "],
+         ["|  "],["              "],
+         ["|  "],["              "],
+         ["|  "],["              "],
+         ["|  "],["              "],
+         ["|  "]]                
+
+bilinen2 = [["--"],["--"],["--"],["--"],["--"],["--"],["--"]]
+
+
+bilinen = []
+bilinmeyen = []
+print("bilinen: ","\n") 
+sira = 1
+sayac = 0
+while sira<7:
+
+    for m in bilinen2: 
+        print(*m,sep="\n",end="")
+         
+    for k in tahta:
+        
+        print("\t".expandtabs(40),*k)
+
+    kelime=["e","r","z","u","r","u","m"]
+
+    kul=input("Bir harf giriniz : ")
+    for i in kul:
+        print("\n")
+        sayac=sira+1
+        
+        if not i in kelime and sayac==2:
+            bilinmeyen+=[i]
+            tahta[3]=["             0"]
+        if not i in kelime and sayac==3:
+            bilinmeyen+=[i]
+            tahta[5]=["             |"]
+        if not i in kelime and sayac==4:
+            bilinmeyen+=[i]
+            tahta[7]=["            ----"]
+        if not i in kelime and sayac==5:
+            bilinmeyen+=[i]
+            tahta[9]=["             |"]
+        if not i in kelime and sayac==6:
+            bilinmeyen+=[i]
+            tahta[11]=["             |"]
+        if not i in kelime and sayac==7:
+            bilinmeyen+=[i]
+            tahta[13]=["             |"]
+
+    for i in kul:
+
+        if i in kelime and sayac==2:
+            bilinen+=[i]
+            bilinen2[0]=[i]
+        if i in kelime and sayac==3:
+            bilinen+=[i]
+            bilinen2[1]=[i]
+        if i in kelime and sayac==4:
+            bilinen+=[i]
+            bilinen2[2]=[i]
+        if i in kelime and sayac==5:
+            bilinen+=[i]
+            bilinen2[3]=[i]
+        if i in kelime and sayac==6:
+            bilinen+=[i]
+            bilinen2[4]=[i]
+        if i in kelime and sayac==7:
+            bilinen+=[i]
+            bilinen2[5]=[i]
+        if i in kelime and sayac==8:
+            bilinen+=[i]
+            bilinen2[6]=[i]
+
+    sira += 1
+else:
+        print("Tekrar deneyiniz")
+        
+
+
+
+##2.odev : sayi tahmin oyunu
+
+outputp = []  
+outputn = []
+rakam=["2","4","9","8"]
+kul=[*input("Yapilan Tahmin : ")]
+sayi=0
+while sayi<1:
+
+    for i in rakam:
+        if kul[0]==rakam[0] and kul[1]==rakam[1] and kul[2]==rakam[2] and kul[3]==rakam[3]:
+            print("tebrikler kazandiniz!")
+            break
+    for i in rakam[0]: 
+        if i in kul[0]:  
+            outputp = outputp + ["x"]
+    for i in rakam[1]:
+        if i == kul[1]: 
+            outputp += ["y"]
+    for i in rakam[2]:        
+        if i == kul[2]:  
+            outputp += ["z"]
+    for i in rakam[3]:
+        if i == kul[3]:  
+            outputp += ["t"]
+    for i in kul[0]: 
+        if i in rakam and i not in rakam[0]:  
+            outputn += ["k"]
+    for i in kul[1]: 
+        if i in rakam and i not in rakam[1]:  
+            outputn += ["l"]
+    for i in kul[2]: 
+        if i in rakam and i not in rakam[2]:
+            outputn += ["m"]
+    for i in kul[3]:
+        if i in rakam and i not in rakam[3]:
+            outputn += ["n"] 
+            continue
+    sayi+=1
+else:
+    ciktip=len(outputp)
+    ciktin=len(outputn)
+    print("Output        : ","+",ciktip," -",ciktin )
+
+
+
+
+##bonus odev : iki listenin kombinasyonu
+liste1=["1","2","3","4","5","6","7","8","9","10"]
+liste2=["a","b","c","d","e","f","g","h","k","l"]
+karma1=[]
+karma2=[]
+
+sayac=0
+while sayac<1:
+    for i in liste1:
+        if sayac<1:
+            karma1+=[liste1[sayac]+liste2[sayac]]+[liste1[sayac]+liste2[sayac+1]]+[liste1[sayac]+liste2[sayac+2]]
+            karma2+=[liste2[sayac]+liste1[sayac]]+[liste2[sayac]+liste1[sayac+1]]+[liste2[sayac]+liste1[sayac+2]]
+            sayac+=1
+        if 1<=sayac<2:
+            karma1+=[liste1[sayac]+liste2[sayac-1]]+[liste1[sayac]+liste2[sayac]]+[liste1[sayac]+liste2[sayac+1]]
+            karma2+=[liste2[sayac]+liste1[sayac-1]]+[liste2[sayac]+liste1[sayac]]+[liste2[sayac]+liste1[sayac+1]]
+            sayac+=1
+        
+        if 1<=sayac<3:
+            karma1+=[liste1[sayac]+liste2[sayac-2]]+[liste1[sayac]+liste2[sayac-1]]+[liste1[sayac]+liste2[sayac]]
+            karma2+=[liste2[sayac]+liste1[sayac-2]]+[liste2[sayac]+liste1[sayac-1]]+[liste2[sayac]+liste1[sayac]]
+            sayac+=1
+
+            continue
+        sayac+=1    
+
+
+print(karma1)
+print(karma2)
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
