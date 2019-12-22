@@ -1,1 +1,1 @@
-# Odevler1
+# ilk 5 hafta odevler
